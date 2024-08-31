@@ -31,7 +31,7 @@ def answer_gen(file,choices,para):
         rfile.close()
         file.close()
     answer_btn=Button(root,text="hello",command=m.answer)
-    answer_btn.place(x=200,y=700,width=100)
+    answer_btn.place(x=250,y=400,width=100)
     answer_btn.pack() 
     os.startfile(filelocation)
     
