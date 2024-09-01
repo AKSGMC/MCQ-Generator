@@ -30,9 +30,8 @@ def answer_gen(file,choices,para):
         data=rfile.read()
         rfile.close()
         file.close()
-    answer_btn=Button(root,text="hello",command=m.answer)
-    answer_btn.place(x=250,y=400,width=100)
-    answer_btn.pack() 
+    answer_btn=Button(root,text="Show Answers",command=m.answer)
+    answer_btn.place(x=250,y=450,width=100)
     os.startfile(filelocation)
     
 root = Tk()
