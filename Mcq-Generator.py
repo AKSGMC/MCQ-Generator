@@ -137,6 +137,7 @@ data=''
 
 #PDF mode - functions
 def pdf_question_mode():
+    root.destroy()
     pdf=Tk()
     pdf.geometry('600x600')
     pdf.resizable(0,0)
@@ -145,11 +146,12 @@ def pdf_question_mode():
     pdftext_font=tkfont.Font(size=20)
     pdftext.config(font=pdftext_font)
     pdftext.place(x=250,y=3)
-    pdf.focus()
     pdf_location=fd.askopenfilename(title='Open PDF file')
-    Button(pdf,text='SELECT PDF',command=m.pdf_question_gen(pdf_location))
+    select_pdf=Button(pdf,text='SELECT PDF',command=m.pdf_question_gen(pdf_location))
+    select_pdf.place(x=250,y=5,width=100)
     pdf_answer=Button(pdf,text='Show Answer for the Generated questions from pdf',border='5',command=m.pdf_answer_gen)
-    pdf_answer.place(x=250,y=350,width=100)
+    pdf_answer.place(x=260,y=500)
+    pdf.focus()
     pdf.update()
     pdf.mainloop()
 
