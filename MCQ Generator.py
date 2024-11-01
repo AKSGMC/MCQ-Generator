@@ -95,7 +95,7 @@ class methods():
                 model="gpt-3.5-turbo",
                 messages=[
                     {"role": "user", "content": '''From the given PDF {}.
-                    Generate mcq questions without answer and don't reveal the location of the file'''.format(pdf_location) 
+                    Generate mcq questions from the given pdf only without answer and don't reveal the location of the file'''.format(pdf_location) 
                     },
                 ],
             )
@@ -107,8 +107,8 @@ class methods():
         except:
             mb.showerror('API ERROR','We can\'t able to perform the required task.\n Please report it on github or try again later')
     def pdf_answer_gen():
-        try:
-            with open('PDF Generated Question.txt','r') as read_question_pdf:
+        #try:
+            with open('PDF Generated Questions.txt','r') as read_question_pdf:
                 questions=read_question_pdf.read()
                 read_question_pdf.close()
             pdf_answer=openai.ChatCompletion.create(
@@ -125,7 +125,7 @@ class methods():
                 open_pdf_answerfile.close()
             os.startfile('PDF Generated Answer.txt')
             quit('code: PDF')
-        except:
+        #except:
             mb.showerror('API ERROR','We can\'t able to perform the required task.\n Please report it on github or try again later')
 
 def para():   
