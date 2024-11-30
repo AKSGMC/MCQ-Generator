@@ -14,9 +14,10 @@ def answer_gen(file,choices,para):
         completion=openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "user", "content": '''create mcq questions based on
-                the given file {} with {} choices but without answers 
-                {}'''.format(file,choices,para)},
+                {"role": "system", "content": "mcq generator helper."},
+                {"role": "user", "content": '''create {} mcq questions based on
+                the given paragraph with {} choices but without answers {} 
+                '''.format(file,choices,para)},
             ],
         )
         result=Label(root,text='The Questions has been Generated!. Opening the file now')
@@ -35,7 +36,7 @@ def answer_gen(file,choices,para):
         answer_btn.place(x=250,y=450,width=100)
         os.startfile(filelocation)
     except:
-        mb.showerror('API ERROR','We can\'t able to perform the required task.\n Please report it on github or try again later')
+        mb.showerror('API ERROR','We can\'t able to perform the required task.\n Please report it on github or try again later\n\nDeveloper info:\n para question gen')
     
 root = Tk()
 root.geometry('600x600')
@@ -76,6 +77,7 @@ class methods():
             ans=openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[
+                    {"role": "system", "content": "mcq generator helper."},
                     {"role": "user", "content": '''give answers for the given questions 
                     without explaination of answer: {}'''.format(data) 
                     },
@@ -87,13 +89,14 @@ class methods():
                 file.close()
                 os.startfile('generated answer.txt')
             quit('code: Paragraph')
-        except:
-            mb.showerror('API ERROR','We can\'t able to perform the required task.\n Please report it on github or try again later')
+        except (TypeError):
+            mb.showerror('API ERROR','We can\'t able to perform the required task.\n Please report it on github or try again later\n\nDeveloper info:\nPara answer gen')
     def pdf_question_gen():
         try:
             pdf_question=openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[
+                    {"role": "system", "content": "mcq generator helper."},
                     {"role": "user", "content": '''From the given PDF {}.
                     Generate mcq questions from the given pdf only without answer and don't reveal the location of the file'''.format(pdf_location) 
                     },
@@ -105,15 +108,16 @@ class methods():
                 open_textfile.close()
             os.startfile('PDF Generated Questions.txt')
         except:
-            mb.showerror('API ERROR','We can\'t able to perform the required task.\n Please report it on github or try again later')
+            mb.showerror('API ERROR','We can\'t able to perform the required task.\n Please report it on github or try again later\n\nDeveloper info:\n PDF Question gen')
     def pdf_answer_gen():
-        #try:
+        try:
             with open('PDF Generated Questions.txt','r') as read_question_pdf:
                 questions=read_question_pdf.read()
                 read_question_pdf.close()
             pdf_answer=openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[
+                    {"role": "system", "content": "mcq generator helper."},
                     {"role": "user", "content": '''give answers for the given questions 
                     without explaination of answer: {}'''.format(questions) 
                     },
@@ -125,8 +129,8 @@ class methods():
                 open_pdf_answerfile.close()
             os.startfile('PDF Generated Answer.txt')
             quit('code: PDF')
-        #except:
-            mb.showerror('API ERROR','We can\'t able to perform the required task.\n Please report it on github or try again later')
+        except:
+            mb.showerror('API ERROR','We can\'t able to perform the required task.\n Please report it on github or try again later\n\nDeveloper info:\nPDF Answer gen')
 
 def para():   
     c_get=m.c_text.get()
