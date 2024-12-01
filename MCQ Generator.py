@@ -78,8 +78,7 @@ class methods():
                 model="gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": "mcq generator helper."},
-                    {"role": "user", "content": '''give answers for the given questions 
-                    without explaination of answer: {}'''.format(data) 
+                    {"role": "user", "content": '''give answers for the given questions: {}'''.format(data) 
                     },
                 ],
             )
@@ -118,8 +117,7 @@ class methods():
                 model="gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": "mcq generator helper."},
-                    {"role": "user", "content": '''give answers for the given questions 
-                    without explaination of answer: {}'''.format(questions) 
+                    {"role": "user", "content": '''give answers for the given questions: {}'''.format(questions) 
                     },
                 ],
             )
@@ -129,7 +127,7 @@ class methods():
                 open_pdf_answerfile.close()
             os.startfile('PDF Generated Answer.txt')
             quit('code: PDF')
-        except:
+        except (TypeError):
             mb.showerror('API ERROR','We can\'t able to perform the required task.\n Please report it on github or try again later\n\nDeveloper info:\nPDF Answer gen')
 
 def para():   
@@ -166,7 +164,7 @@ def pdf_question_mode():
     pdftext.place(x=250,y=3)
     global pdf_location
     pdf_location=fd.askopenfilename(title='Open PDF file')
-    gen_pdf_answer=Button(pdf,text='Get Answers from selected PDF',command=m.pdf_question_gen)
+    gen_pdf_question=Button(pdf,text='Get Questions from selected PDF',command=m.pdf_question_gen)
     gen_pdf_answer.place(x=225,y=100)
     pdf_answer=Button(pdf,text='Show Answer for the Generated questions from pdf',border='5',command=m.pdf_answer_gen)
     pdf_answer.place(x=175,y=300)
