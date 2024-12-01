@@ -165,7 +165,7 @@ def pdf_question_mode():
     global pdf_location
     pdf_location=fd.askopenfilename(title='Open PDF file')
     gen_pdf_question=Button(pdf,text='Get Questions from selected PDF',command=m.pdf_question_gen)
-    gen_pdf_answer.place(x=225,y=100)
+    gen_pdf_question.place(x=225,y=100)
     pdf_answer=Button(pdf,text='Show Answer for the Generated questions from pdf',border='5',command=m.pdf_answer_gen)
     pdf_answer.place(x=175,y=300)
     pdf.focus()
