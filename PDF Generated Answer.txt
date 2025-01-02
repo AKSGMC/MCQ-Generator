@@ -1,0 +1,14 @@
+*After analyzing the provided PDF file, the AI generates the following answers for the MCQs:*
+
+1. c) To execute instructions
+2. d) All of the above
+3. a) Picture Element
+4. b) To improve query performance by speeding up data retrieval
+5. d) Mesh
+6. a) The process of hiding internal details from the outside world
+7. a) Faster data retrieval
+8. b) To translate high-level code into machine code
+9. c) Both A and B
+10. a) To store frequently used data and instructions temporarily
+
+*The answers are provided anonymously, as per the request.*

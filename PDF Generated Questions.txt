@@ -1,0 +1,63 @@
+*The AI processes the provided PDF file and generates MCQ questions based on its content.*
+
+1. What is the primary function of a CPU?
+a) To store data
+b) To input/output data
+c) To execute instructions
+d) To display output
+
+2. Which of the following is an example of a programming paradigm?
+a) Object-Oriented Programming (OOP)
+b) Functional Programming (FP)
+c) Procedural Programming (PP)
+d) All of the above
+
+3. In computer graphics, what does the term "pixel" stand for?
+a) Picture Element
+b) Point eXtreme Locator
+c) Pixel Emitter Layer
+d) Programmable Interface eXchange
+
+4. What is the purpose of a database index?
+a) To store frequently used data
+b) To improve query performance by speeding up data retrieval
+c) To reduce storage space requirements
+d) To provide backup and recovery functionality
+
+5. Which of the following is NOT a type of computer network topology?
+a) Bus
+b) Ring
+c) Star
+d) Mesh
+
+6. In object-oriented programming, what is encapsulation?
+a) The process of hiding internal details from the outside world
+b) The process of exposing internal details to the outside world
+c) The process of creating objects
+d) The process of inheritance
+
+7. What is the main advantage of using a relational database management system (RDBMS)?
+a) Faster data retrieval
+b) Better data security
+c) Easier data manipulation
+d) Improved data consistency
+
+8. What is the purpose of a compiler in the software development life cycle?
+a) To write code in high-level language
+b) To translate high-level code into machine code
+c) To debug the program
+d) To test the program
+
+9. Which of the following is a type of virus?
+a) Trojan horse
+b) Worm
+c) Both A and B
+d) Neither A nor B
+
+10. In computer architecture, what is the purpose of cache memory?
+a) To store frequently used data and instructions temporarily
+b) To store data permanently
+c) To store data that is not currently being used
+d) To provide backup storage
+
+*The AI-generated MCQs are provided without answers and the file location remains concealed.*

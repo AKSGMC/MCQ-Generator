@@ -78,7 +78,7 @@ class methods():
                 model="gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": "mcq generator helper."},
-                    {"role": "user", "content": '''give answers for the given questions: {}'''.format(data) 
+                    {"role": "user", "content": '''give answers for the given questions with explaination: {}'''.format(data) 
                     },
                 ],
             )
@@ -117,7 +117,7 @@ class methods():
                 model="gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": "mcq generator helper."},
-                    {"role": "user", "content": '''give answers for the given questions: {}'''.format(questions) 
+                    {"role": "user", "content": '''give answers for the given questions with explaination: {}'''.format(questions) 
                     },
                 ],
             )
