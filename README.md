@@ -1,5 +1,5 @@
 
-                        **This file is created using tkinter,openai**
+                        **This program is created using tkinter,openai**
 _I hope this program can be used by teachers which helps them to take book inside question fast_
 
 
